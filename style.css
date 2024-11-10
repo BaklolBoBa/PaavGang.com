@@ -1,0 +1,228 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+  line-height: 1.8; /* Increased line height for readability */
+  font-size: 18px; /* Increased font size */
+  padding: 0 20px;
+}
+
+h1, h2, h3, h4 {
+  color: #333;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #333;
+  padding: 20px 0; /* Increased padding for more spacing */
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  color: white;
+  font-size: 2.5rem; /* Larger font size for main header */
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 25px; /* Increased margin for more space between links */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem; /* Larger text size for nav links */
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Header Section */
+header {
+  background-color: #4CAF50;
+  color: white;
+  padding: 80px 0; /* Increased padding for more space */
+  text-align: center;
+}
+
+header h2 {
+  font-size: 3.5rem; /* Larger header text */
+  margin-bottom: 20px;
+}
+
+header p {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+.btn-primary {
+  background-color: #008CBA;
+  color: white;
+  padding: 20px 40px;
+  font-size: 1.3rem; /* Larger text for button */
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #005f7f;
+}
+
+/* Features Section */
+.section {
+  padding: 80px 0; /* Increased padding for more space */
+  text-align: center;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.feature-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px; /* Increased gap between features */
+}
+
+.feature {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 22%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feature h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.feature p {
+  font-size: 1.3rem;
+}
+
+/* Invite Section */
+#invite {
+  background-color: #f4f4f4;
+}
+
+#invite h2 {
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+}
+
+#invite p {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+
+/* Testimonials Section */
+#testimonials {
+  background-color: #f9f9f9;
+}
+
+.testimonial-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  width: 45%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px; /* Increased margin for more spacing */
+}
+
+.testimonial p {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+.testimonial h4 {
+  font-size: 1.3rem;
+  font-style: italic;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #f4f4f4;
+}
+
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center; /* Added gap between buttons */
+}
+
+.contact-options a {
+  background-color: #008CBA;
+  color: white;
+  padding: 20px 40px;
+  font-size: 1.4rem; /* Increased font size for buttons */
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.contact-options a:hover {
+  background-color: #005f7f;
+}
+
+/* Tutorial Section */
+.tutorial-steps {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* Increased gap for more spacing between steps */
+}
+
+.step h4 {
+  font-size: 2.2rem; /* Larger font size for step headers */
+}
+
+.step p {
+  font-size: 1.6rem; /* Increased font size for step text */
+  text-align: center;
+  margin-bottom: 20px; /* Increased margin for spacing */
+}
+
+.step a {
+  font-size: 1.4rem; /* Larger font size for buttons */
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 30px 0; /* Increased padding for more space */
+  font-size: 1.3rem; /* Larger font size for footer text */
+}
