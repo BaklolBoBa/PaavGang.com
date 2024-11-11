@@ -9,8 +9,8 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #f8f8f8;
   color: #333;
-  line-height: 1.8; /* Increased line height for readability */
-  font-size: 18px; /* Increased font size */
+  line-height: 1.8;
+  font-size: 18px;
   padding: 0 20px;
 }
 
@@ -21,7 +21,8 @@ h1, h2, h3, h4 {
 /* Navigation Bar */
 nav {
   background-color: #333;
-  padding: 20px 0; /* Increased padding for more spacing */
+  padding: 20px 0;
+  position: relative;
 }
 
 nav .container {
@@ -32,7 +33,7 @@ nav .container {
 
 nav h1 {
   color: white;
-  font-size: 2.5rem; /* Larger font size for main header */
+  font-size: 2.5rem;
 }
 
 nav ul {
@@ -41,29 +42,61 @@ nav ul {
 }
 
 nav ul li {
-  margin-left: 25px; /* Increased margin for more space between links */
+  margin-left: 25px;
 }
 
 nav a {
   color: white;
   text-decoration: none;
-  font-size: 1.2rem; /* Larger text size for nav links */
+  font-size: 1.2rem;
 }
 
 nav a:hover {
   text-decoration: underline;
 }
 
+/* Menu Toggle for Mobile */
+.menu-toggle {
+  display: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  /* Hide nav links initially on mobile */
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 20px 0;
+  }
+
+  /* Display menu-toggle button */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Show nav links when menu is open */
+  nav ul.active {
+    display: flex;
+  }
+}
+
 /* Header Section */
 header {
   background-color: #4CAF50;
   color: white;
-  padding: 80px 0; /* Increased padding for more space */
+  padding: 80px 0;
   text-align: center;
 }
 
 header h2 {
-  font-size: 3.5rem; /* Larger header text */
+  font-size: 3.5rem;
   margin-bottom: 20px;
 }
 
@@ -76,7 +109,7 @@ header p {
   background-color: #008CBA;
   color: white;
   padding: 20px 40px;
-  font-size: 1.3rem; /* Larger text for button */
+  font-size: 1.3rem;
   border-radius: 5px;
   text-decoration: none;
   display: inline-block;
@@ -86,9 +119,9 @@ header p {
   background-color: #005f7f;
 }
 
-/* Features Section */
+/* Section Styling */
 .section {
-  padding: 80px 0; /* Increased padding for more space */
+  padding: 80px 0;
   text-align: center;
 }
 
@@ -98,125 +131,54 @@ header p {
   margin: 0 auto;
 }
 
+/* Responsive Container Width */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+
 h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
 }
 
-.feature-grid {
+/* Feature and Testimonial Grids */
+.feature-grid, .testimonial-grid {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 30px; /* Increased gap between features */
+  gap: 30px;
 }
 
-.feature {
+.feature, .testimonial {
   background-color: white;
   padding: 25px;
   border-radius: 8px;
-  width: 22%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.feature h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.feature p {
-  font-size: 1.3rem;
-}
-
-/* Invite Section */
-#invite {
-  background-color: #f4f4f4;
-}
-
-#invite h2 {
-  font-size: 2.8rem;
-  margin-bottom: 30px;
-}
-
-#invite p {
-  font-size: 1.4rem;
-  margin-bottom: 30px;
-}
-
-/* Testimonials Section */
-#testimonials {
-  background-color: #f9f9f9;
-}
-
-.testimonial-grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.testimonial {
-  background-color: white;
-  padding: 25px;
-  border-radius: 8px;
-  width: 45%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px; /* Increased margin for more spacing */
-}
-
-.testimonial p {
-  font-size: 1.4rem;
-  margin-bottom: 15px;
-}
-
-.testimonial h4 {
-  font-size: 1.3rem;
-  font-style: italic;
-}
-
-/* Contact Section */
-#contact {
-  background-color: #f4f4f4;
-}
-
-.contact-options {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  align-items: center; /* Added gap between buttons */
-}
-
-.contact-options a {
-  background-color: #008CBA;
-  color: white;
-  padding: 20px 40px;
-  font-size: 1.4rem; /* Increased font size for buttons */
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.contact-options a:hover {
-  background-color: #005f7f;
-}
-
-/* Tutorial Section */
-.tutorial-steps {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px; /* Increased gap for more spacing between steps */
-}
-
-.step h4 {
-  font-size: 2.2rem; /* Larger font size for step headers */
-}
-
-.step p {
-  font-size: 1.6rem; /* Increased font size for step text */
-  text-align: center;
-  margin-bottom: 20px; /* Increased margin for spacing */
-}
-
-.step a {
-  font-size: 1.4rem; /* Larger font size for buttons */
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  /* Stack items vertically */
+  .feature-grid, .testimonial-grid, .contact-options {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Typography adjustments */
+  h1, h2, h3, h4 {
+    font-size: 1.5rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
 }
 
 /* Footer */
@@ -224,47 +186,26 @@ footer {
   background-color: #333;
   color: white;
   text-align: center;
-  padding: 30px 0; /* Increased padding for more space */
-  font-size: 1.3rem; /* Larger font size for footer text */
+  padding: 30px 0;
+  font-size: 1.3rem;
 }
 
-@media (max-width: 768px)   {
-  nav ul {
-      display: none;
-      flex-direction: column;
-  }
+/* Contact Section */
+.contact-options {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
 
-  /* Show menu on click */
-  .menu-toggle {
-      display: inline-block;
-      cursor: pointer;
-  }
+.contact-options a {
+  background-color: #008CBA;
+  color: white;
+  padding: 20px 40px;
+  font-size: 1.4rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
 
-  .menu-toggle.active + ul {
-      display: flex;
-  }
-  /* Make text and buttons larger */
-  h1, h2, h3 {
-      font-size: 1.5rem;
-  }
-
-  p {
-      font-size: 1rem;
-  }
-
-  .btn-primary, .btn-secondary {
-      font-size: 1rem;
-      padding: 12px 20px;
-  }
-
-  /* Stack feature and testimonial items vertically */
-  .feature-grid, .testimonial-grid, .contact-options {
-      flex-direction: column;
-      align-items: center;
-  }
-
-  /* Make sections take full width */
-  .container {
-      width: 90%;
-  }
+.contact-options a:hover {
+  background-color: #005f7f;
 }
