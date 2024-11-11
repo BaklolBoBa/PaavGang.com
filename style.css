@@ -246,6 +246,12 @@ footer {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+  /* Show the hamburger icon on mobile */
+  .menu-toggle-label {
+    display: block;
+  }
+
+  /* Hide the menu by default */
   nav ul {
     display: flex;
     flex-direction: column;
@@ -261,9 +267,36 @@ footer {
     z-index: 1;
   }
 
-  .menu-toggle-label {
-    display: block;
+  /* Slide menu in when #menu is targeted */
+  #menu:target {
+    right: 0;
   }
+
+  /* Style for each menu item */
+  nav ul li {
+    margin: 15px 0;
+  }
+
+  nav ul li a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  /* Hide the close link by default */
+  .close-menu {
+    display: none;
+  }
+
+  /* Show the Close link when menu is open */
+  #menu:target .close-menu {
+    display: block;
+    font-size: 1.2rem;
+    color: white;
+    margin-top: 20px;
+    text-decoration: underline;
+  }
+
 
   .menu-toggle-checkbox:checked + .menu-toggle-label + ul {
     right: 0;
