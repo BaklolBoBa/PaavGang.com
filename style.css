@@ -14,6 +14,10 @@ body {
   padding: 0 20px;
 }
 
+h1, h2, h3, h4 {
+  color: #333;
+}
+
 /* Navigation Bar */
 nav {
   background-color: #333;
@@ -226,7 +230,7 @@ footer {
 
 /* Mobile-specific Styles */
 @media (max-width: 768px) {
-  /* Keep existing mobile styles unchanged */
+  /* Mobile Navigation Styles */
   nav ul {
     display: none;
     flex-direction: column;
@@ -236,14 +240,23 @@ footer {
     text-align: center;
   }
 
-  .menu-toggle-label {
-    display: block;
+  .menu-toggle-checkbox {
+    display: none; /* Hide the checkbox itself */
   }
 
+  .menu-toggle-label {
+    display: block;
+    font-size: 2.5rem; /* Increase size of hamburger */
+    color: white;
+    cursor: pointer;
+  }
+
+  /* Make the menu visible when the checkbox is checked */
   .menu-toggle-checkbox:checked ~ .nav-menu {
     display: flex;
   }
 
+  /* Adjust the nav items when the menu is visible */
   .nav-menu li {
     margin: 15px 0;
   }
@@ -253,11 +266,11 @@ footer {
   }
 
   h1, h2, h3, h4 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* Adjusting font size for readability on mobile */
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1rem; /* Smaller text on mobile for better readability */
   }
 
   .btn-primary, .btn-secondary {
