@@ -265,21 +265,5 @@ footer {
     width: 90%;
   }
 
-  h1, h2, h3, h4 {
-    font-size: 1.5rem; /* Adjusting font size for readability on mobile */
-  }
-
-  p {
-    font-size: 1rem; /* Smaller text on mobile for better readability */
-  }
-
-  .btn-primary, .btn-secondary {
-    font-size: 1rem;
-    padding: 12px 20px;
-  }
-
-  .feature-grid, .testimonial-grid, .contact-options {
-    flex-direction: column;
-    align-items: center;
-  }
+  /* No changes to mobile text sizes, keeping it as it was */
 }
