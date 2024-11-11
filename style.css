@@ -10,7 +10,7 @@ body {
   background-color: #f8f8f8;
   color: #333;
   line-height: 1.8;
-  font-size: 18px; /* Desktop font size */
+  font-size: 18px;
   padding: 0 20px;
 }
 
@@ -91,10 +91,12 @@ header p {
   font-size: 1.3rem;
   border-radius: 5px;
   text-decoration: none;
+  display: inline-block;
 }
 
 .btn-primary:hover {
   background-color: #005f7f;
+  margin-bottom: 30px; /* Extra space for Invite button */
 }
 
 /* Features Section */
@@ -264,6 +266,12 @@ footer {
   .feature-grid, .testimonial-grid, .contact-options {
     flex-direction: column;
     align-items: center;
+    gap: 20px; /* Added spacing for mobile layout */
+  }
+
+  .feature, .testimonial {
+    width: 90%; /* Full width for mobile */
+    margin-bottom: 20px; /* Space between cards */
   }
 
   h1, h2, h3, h4 {
