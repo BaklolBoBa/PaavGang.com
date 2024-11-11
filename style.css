@@ -99,8 +99,7 @@ header p {
 }
 
 .btn-primary:hover {
-  background-color: #005f7f;
-  margin-bottom: 30px; /* Extra space for Invite button */
+  background-color: #005f7f; /* Extra space for Invite button */
 }
 
 /* Features Section */
