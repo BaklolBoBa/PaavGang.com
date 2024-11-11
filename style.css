@@ -64,6 +64,10 @@ nav a:hover {
   font-size: 2rem;
   color: white;
   cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
 }
 
 /* Header Section */
@@ -243,12 +247,18 @@ footer {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   nav ul {
-    display: none;
+    display: flex;
     flex-direction: column;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100%;
     background-color: #333;
-    padding: 10px 0;
+    padding-top: 60px;
     text-align: center;
+    transition: right 0.3s ease;
+    z-index: 1;
   }
 
   .menu-toggle-label {
@@ -256,7 +266,7 @@ footer {
   }
 
   .menu-toggle-checkbox:checked + .menu-toggle-label + ul {
-    display: flex;
+    right: 0;
   }
 
   .nav-menu li {
