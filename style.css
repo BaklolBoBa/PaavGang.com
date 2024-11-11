@@ -1,5 +1,4 @@
 /* Global Styles */
-/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -31,12 +30,26 @@ nav h1 {
   font-size: 2rem;
 }
 
-nav ul {
+/* Hide the default checkbox for menu toggle */
+.menu-toggle-checkbox {
+  display: none;
+}
+
+/* Hamburger icon */
+.menu-toggle-label {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-menu {
   list-style-type: none;
   display: flex;
 }
 
-nav ul li {
+.nav-menu li {
   margin-left: 25px;
 }
 
@@ -50,22 +63,11 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Mobile Menu Styles */
-.menu-toggle-checkbox {
-  display: none; /* Hide the checkbox */
-}
-
-.menu-toggle-label {
-  display: none; /* Hide the hamburger icon by default */
-  font-size: 2rem;
-  color: white;
-  cursor: pointer;
-}
-
-/* Show hamburger icon on small screens */
+/* Responsive adjustments */
 @media (max-width: 768px) {
-  nav ul {
-      display: none; /* Hide the menu by default */
+  /* Hide menu by default on mobile */
+  .nav-menu {
+      display: none;
       flex-direction: column;
       width: 100%;
       background-color: #333;
@@ -73,17 +75,19 @@ nav a:hover {
       text-align: center;
   }
 
+  /* Show hamburger icon on small screens */
   .menu-toggle-label {
-      display: block; /* Show hamburger icon */
+      display: block;
   }
 
-  /* Show the menu when checkbox is checked */
+  /* Toggle menu visibility on checkbox check */
   .menu-toggle-checkbox:checked ~ .nav-menu {
       display: flex;
   }
 
+  /* Space out menu items */
   .nav-menu li {
-      margin: 15px 0; /* Space out menu items for mobile */
+      margin: 15px 0;
   }
 }
 
@@ -119,7 +123,7 @@ header p {
   background-color: #005f7f;
 }
 
-/* Section Styling */
+/* General Section Styling */
 .section {
   padding: 80px 0;
   text-align: center;
@@ -131,7 +135,6 @@ header p {
   margin: 0 auto;
 }
 
-/* Responsive Container Width */
 @media (max-width: 768px) {
   .container {
     width: 90%;
@@ -158,15 +161,14 @@ h2 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Mobile Adjustments */
 @media (max-width: 768px) {
-  /* Stack items vertically */
+  /* Stack items vertically on mobile */
   .feature-grid, .testimonial-grid, .contact-options {
     flex-direction: column;
     align-items: center;
   }
   
-  /* Typography adjustments */
+  /* Typography adjustments for mobile */
   h1, h2, h3, h4 {
     font-size: 1.5rem;
   }
