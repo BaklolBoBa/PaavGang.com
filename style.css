@@ -1,4 +1,5 @@
 /* Global Styles */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -11,18 +12,12 @@ body {
   color: #333;
   line-height: 1.8;
   font-size: 18px;
-  padding: 0 20px;
-}
-
-h1, h2, h3, h4 {
-  color: #333;
 }
 
 /* Navigation Bar */
 nav {
   background-color: #333;
-  padding: 20px 0;
-  position: relative;
+  padding: 20px;
 }
 
 nav .container {
@@ -33,7 +28,7 @@ nav .container {
 
 nav h1 {
   color: white;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 nav ul {
@@ -55,35 +50,40 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Menu Toggle for Mobile */
-.menu-toggle {
-  display: none;
-  color: white;
+/* Mobile Menu Styles */
+.menu-toggle-checkbox {
+  display: none; /* Hide the checkbox */
+}
+
+.menu-toggle-label {
+  display: none; /* Hide the hamburger icon by default */
   font-size: 2rem;
+  color: white;
   cursor: pointer;
 }
 
+/* Show hamburger icon on small screens */
 @media (max-width: 768px) {
-  /* Hide nav links initially on mobile */
   nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    padding: 20px 0;
+      display: none; /* Hide the menu by default */
+      flex-direction: column;
+      width: 100%;
+      background-color: #333;
+      padding: 20px 0;
+      text-align: center;
   }
 
-  /* Display menu-toggle button */
-  .menu-toggle {
-    display: block;
+  .menu-toggle-label {
+      display: block; /* Show hamburger icon */
   }
 
-  /* Show nav links when menu is open */
-  nav ul.active {
-    display: flex;
+  /* Show the menu when checkbox is checked */
+  .menu-toggle-checkbox:checked ~ .nav-menu {
+      display: flex;
+  }
+
+  .nav-menu li {
+      margin: 15px 0; /* Space out menu items for mobile */
   }
 }
 
