@@ -228,13 +228,21 @@ footer {
   font-size: 1.3rem; /* Larger font size for footer text */
 }
 
-@media (max-width: 768px) {
-  /* Stack navigation items vertically */
+@media (max-width: 768px)   {
   nav ul {
+      display: none;
       flex-direction: column;
-      align-items: center;
   }
 
+  /* Show menu on click */
+  .menu-toggle {
+      display: inline-block;
+      cursor: pointer;
+  }
+
+  .menu-toggle.active + ul {
+      display: flex;
+  }
   /* Make text and buttons larger */
   h1, h2, h3 {
       font-size: 1.5rem;
