@@ -286,6 +286,20 @@ footer {
     font-size: 1rem;
     padding: 12px 20px;
   }
+  .tutorial-steps img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .tutorial-steps {
+    gap: 20px;
+  }
 
   footer {
     padding: 20px 0;
