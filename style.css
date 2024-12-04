@@ -91,7 +91,7 @@ header p {
 .btn-primary {
   background-color: #008CBA;
   color: white;
-  padding: 40px;
+  padding: 20px 40px;
   font-size: 1.3rem;
   border-radius: 5px;
   text-decoration: none;
