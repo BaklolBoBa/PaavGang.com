@@ -91,9 +91,9 @@ header p {
 .btn-primary {
   background-color: #008CBA;
   color: white;
-  padding: 20px 40px;
+  padding: 20px 40px 25px 40px; /* Added bottom padding */ 
   font-size: 1.3rem;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
   display: inline-block;
 }
