@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Button hover animation
-    document.querySelectorAll("button").forEach(button => {
+    document.querySelectorAll(".btn-primary").forEach(button => {
         button.addEventListener("mouseover", () => {
             button.style.transform = "scale(1.1)";
             button.style.transition = "0.3s";
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("mouseout", () => {
             button.style.transform = "scale(1)";
         });
-    });
+    });    
 
     // Lightbox effect for images
     document.querySelectorAll("img").forEach(img => {
