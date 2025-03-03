@@ -1,4 +1,4 @@
-// script.js - Enhancing website with animations & interactivity
+// script.js - Enhancing website with animations & interactivity (PC Optimized)
 
 document.addEventListener("DOMContentLoaded", function () {
     // Smooth scrolling for internal links
@@ -40,13 +40,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 lightbox.remove();
             });
         });
-    });
-
-    // Mobile menu toggle
-    const menuToggle = document.querySelector(".menu-toggle-label");
-    const menu = document.querySelector("#menu");
-    menuToggle.addEventListener("click", () => {
-        menu.classList.toggle("active");
     });
 
     // Typing animation for headings
@@ -95,12 +88,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
     showTestimonial();
 
-    // Dark mode toggle
+    // Optimized Dark mode toggle
     const darkModeBtn = document.createElement("button");
     darkModeBtn.innerText = "Toggle Dark Mode";
     darkModeBtn.classList.add("dark-mode-btn");
     document.body.appendChild(darkModeBtn);
     darkModeBtn.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
+        document.querySelectorAll("h1, h2, h3, p, a, .btn-primary").forEach(el => {
+            el.classList.toggle("dark-text");
+        });
     });
 });
