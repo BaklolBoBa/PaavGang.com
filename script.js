@@ -129,10 +129,17 @@ document.addEventListener("DOMContentLoaded", function () {
     // Add the toggle to the navigation bar
     document.querySelector("nav .container").appendChild(darkModeContainer);
 
+    // Load saved preference
+    const savedDarkMode = localStorage.getItem('darkMode');
+    if (savedDarkMode) {
+    document.body.classList.add("dark-mode");
+    darkModeInput.checked = true;
+    }
+
     darkModeInput.addEventListener("change", () => {
         document.body.classList.toggle("dark-mode");
-        console.log("Dark mode toggled:", document.body.classList.contains("dark-mode"));
-    });
+        localStorage.setItem('darkMode', document.body.classList.contains("dark-mode"));
+        });
         document.body.style.display = 'none';
         void document.body.offsetWidth; // Trigger repaint
         document.body.style.display = '';
