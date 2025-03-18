@@ -451,3 +451,38 @@ nav .dark-mode-label {
   color: white;
   font-size: 1rem;
 }
+/* Add these specific dark mode styles for each section */
+.dark-mode #invite {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode #invite h2, .dark-mode #invite p, .dark-mode #invite .btn-primary {
+  color: white;
+}
+
+.dark-mode #invite .btn-primary {
+  background-color: #1976d2;
+}
+
+.dark-mode #testimonials {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode #testimonials h2, .dark-mode #testimonials p, .dark-mode #testimonials h4 {
+  color: white;
+}
+
+.dark-mode #contact {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode #contact h2, .dark-mode #contact p, .dark-mode #contact .btn-primary {
+  color: white;
+}
+
+.dark-mode #contact .btn-primary {
+  background-color: #1976d2;
+}

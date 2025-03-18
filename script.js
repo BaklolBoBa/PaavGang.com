@@ -133,4 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.toggle("dark-mode");
         console.log("Dark mode toggled:", document.body.classList.contains("dark-mode"));
     });
-});
+        document.body.style.display = 'none';
+        void document.body.offsetWidth; // Trigger repaint
+        document.body.style.display = '';
+  });
