@@ -91,7 +91,7 @@ header p {
 .btn-primary {
   background-color: #008CBA;
   color: white;
-  padding: 20px 40px 25px 40px; /* Added bottom padding */ 
+  padding: 20px 40px 25px 40px; 
   font-size: 1.3rem;
   border-radius: 10px;
   text-decoration: none;
@@ -99,7 +99,7 @@ header p {
 }
 
 .btn-primary:hover {
-  background-color: #005f7f; /* Extra space for Invite button */
+  background-color: #005f7f;
 }
 
 /* Common Section Styles */
@@ -252,12 +252,10 @@ footer {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-  /* Show the hamburger icon on mobile */
   .menu-toggle-label {
     display: block;
   }
 
-  /* Hide the menu by default */
   nav ul {
     display: flex;
     flex-direction: column;
@@ -273,12 +271,10 @@ footer {
     z-index: 1;
   }
 
-  /* Slide menu in when #menu is targeted */
   #menu:target {
     right: 0;
   }
 
-  /* Style for each menu item */
   nav ul li {
     margin: 15px 0;
   }
@@ -289,37 +285,15 @@ footer {
     text-decoration: none;
   }
 
-  /* Hide the close link by default */
-  .close-menu {
-    display: none;
-  }
-
-  /* Show the Close link when menu is open */
-  #menu:target .close-menu {
-    display: block;
-    font-size: 1.2rem;
-    color: white;
-    margin-top: 20px;
-    text-decoration: underline;
-  }
-
-  .menu-toggle-checkbox:checked + .menu-toggle-label + ul {
-    right: 0;
-  }
-
-  .nav-menu li {
-    margin: 15px 0;
-  }
-
   .feature-grid, .testimonial-grid, .contact-options {
     flex-direction: column;
     align-items: center;
-    gap: 20px; /* Added spacing for mobile layout */
+    gap: 20px;
   }
 
   .feature, .testimonial {
-    width: 90%; /* Full width for mobile */
-    margin-bottom: 20px; /* Space between cards */
+    width: 90%;
+    margin-bottom: 20px;
   }
 
   h1, h2, h3, h4 {
@@ -357,6 +331,7 @@ footer {
   transform: translateY(0);
 }
 
+/* Dark Mode Styles */
 .dark-mode {
   background-color: #121212;
   color: #ffffff;
@@ -395,7 +370,7 @@ footer {
   filter: brightness(0.9);
 }
 
-/* Specific styling for all sections in dark mode */
+/* Apply dark mode to all sections */
 .dark-mode .section {
   background-color: #121212;
   color: white;
@@ -412,6 +387,7 @@ footer {
   color: white;
 }
 
+/* Dark Mode Toggle Styles */
 .dark-mode-toggle {
   position: relative;
   display: inline-block;
@@ -464,7 +440,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* Update your navigation bar to include the dark mode toggle */
+/* Navigation Bar Adjustments for Dark Mode Toggle */
 nav .dark-mode-container {
   display: flex;
   align-items: center;
