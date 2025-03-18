@@ -36,7 +36,20 @@ document.addEventListener("DOMContentLoaded", function () {
             imgClone.style.boxShadow = "0 0 10px rgba(0,0,0,0.5)";
             
             lightbox.appendChild(imgClone);
+            
+            lightbox.style.backgroundColor = "rgba(0, 0, 0, 0.9)";
+            lightbox.style.display = "flex";
+            lightbox.style.justifyContent = "center";
+            lightbox.style.alignItems = "center";
+            lightbox.style.position = "fixed"; 
+            lightbox.style.top = "0";
+            lightbox.style.left = "0";
+            lightbox.style.width = "100%";
+            lightbox.style.height = "100%";
+            lightbox.style.zIndex = "1000";
+
             lightbox.addEventListener("click", () => {
+
                 lightbox.remove();
             });
         });
@@ -63,11 +76,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Scroll animations
     const sections = document.querySelectorAll(".section");
+    // In your revealSections function
     function revealSections() {
         sections.forEach(section => {
             const sectionTop = section.getBoundingClientRect().top;
             if (sectionTop < window.innerHeight - 100) {
-                section.classList.add("visible");
+                section.style.opacity = "1";
+                section.style.transform = "translateY(0)";
+                section.style.transition = "all 0.5s ease-in-out";
             }
         });
     }
@@ -93,10 +109,8 @@ document.addEventListener("DOMContentLoaded", function () {
     darkModeBtn.innerText = "Toggle Dark Mode";
     darkModeBtn.classList.add("dark-mode-btn");
     document.body.appendChild(darkModeBtn);
+
     darkModeBtn.addEventListener("click", () => {
         document.body.classList.toggle("dark-mode");
-        document.querySelectorAll("h1, h2, h3, p, a, .btn-primary").forEach(el => {
-            el.classList.toggle("dark-text");
         });
     });
-});

@@ -360,26 +360,46 @@ footer {
 
 .dark-mode {
   background-color: #121212;
-  color: white;
+  color: #ffffff;
 }
 
-.dark-text {
-  color: white !important;
+.dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 {
+  color: #e0e0e0;
+}
+
+.dark-mode p, .dark-mode a, .dark-mode .btn-primary {
+  color: #e0e0e0;
 }
 
 .dark-mode .btn-primary {
-  background-color: #333;
-  color: white;
+  background-color: #1976d2;
 }
 
-.dark-mode-btn {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  padding: 10px;
-  cursor: pointer;
-  background-color: black;
-  color: white;
-  border: 1px solid white;
+.dark-mode nav {
+  background-color: #121212;
 }
 
+.dark-mode nav a {
+  color: #e0e0e0;
+}
+
+.dark-mode header {
+  background-color: #212121;
+}
+
+.dark-mode .feature, .dark-mode .testimonial {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+}
+
+/* Remove the !important rule from your existing dark-text class */
+.dark-text {
+  color: white;
+}
+.dark-mode .container, .dark-mode .section, .dark-mode .tutorial-steps {
+  color: #e0e0e0;
+}
+
+.dark-mode img {
+  filter: brightness(0.9);
+}
