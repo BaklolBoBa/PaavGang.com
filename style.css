@@ -228,26 +228,17 @@ p {
 }
 
 /* Tutorial Section */
-.tutorial-steps {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-  margin-top: 30px;
+#tutorial {
+  background-color: white;
 }
 
-.step h4 {
-  font-size: 2.2rem;
+#tutorial h2, #tutorial p, #tutorial a {
+  color: #333;
 }
 
-.step p {
-  font-size: 1.6rem;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.step a {
-  font-size: 1.4rem;
+#tutorial .btn-primary {
+  background-color: #008CBA;
+  color: white;
 }
 
 /* Footer */
@@ -344,19 +335,9 @@ footer {
     padding: 18px 20px;
   }
 
-  .tutorial-steps img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 20px;
-  }
-
   .container {
     width: 90%;
     margin: 0 auto;
-  }
-
-  .tutorial-steps {
-    gap: 20px;
   }
 
   footer {
@@ -412,6 +393,24 @@ footer {
 
 .dark-mode img {
   filter: brightness(0.9);
+}
+
+/* Specific styling for tutorial section in dark mode */
+.dark-mode #tutorial {
+  background-color: #121212;
+}
+
+.dark-mode #tutorial .container {
+  color: white;
+}
+
+.dark-mode #tutorial h2, .dark-mode #tutorial p, .dark-mode #tutorial a {
+  color: white;
+}
+
+.dark-mode #tutorial .btn-primary {
+  background-color: #1976d2;
+  color: white;
 }
 
 .dark-mode-toggle {
