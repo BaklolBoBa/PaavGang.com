@@ -104,13 +104,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
     showTestimonial();
 
-    // Optimized Dark mode toggle
-    const darkModeBtn = document.createElement("button");
-    darkModeBtn.innerText = "Toggle Dark Mode";
-    darkModeBtn.classList.add("dark-mode-btn");
-    document.body.appendChild(darkModeBtn);
+   
+    // Replace your existing dark mode toggle code with this
+        const darkModeContainer = document.createElement("div");
+        darkModeContainer.className = "dark-mode-container";
 
-    darkModeBtn.addEventListener("click", () => {
+        const darkModeLabel = document.createElement("span");
+        darkModeLabel.className = "dark-mode-label";
+        darkModeLabel.textContent = "Dark Mode";
+
+        const darkModeToggle = document.createElement("label");
+        darkModeToggle.className = "dark-mode-toggle";
+        darkModeToggle.htmlFor = "dark-mode-switch";
+
+        const darkModeInput = document.createElement("input");
+        darkModeInput.type = "checkbox";
+        darkModeInput.id = "dark-mode-switch";
+
+        const darkModeSlider = document.createElement("span");
+        darkModeSlider.className = "slider round";
+
+        darkModeToggle.appendChild(darkModeInput);
+        darkModeToggle.appendChild(darkModeSlider);
+        darkModeContainer.appendChild(darkModeLabel);
+        darkModeContainer.appendChild(darkModeToggle);
+
+        // Add the toggle to the navigation bar
+        document.querySelector("nav .container").appendChild(darkModeContainer);
+
+        darkModeInput.addEventListener("change", () => {
         document.body.classList.toggle("dark-mode");
         });
     });
