@@ -395,17 +395,19 @@ footer {
   filter: brightness(0.9);
 }
 
-/* Specific styling for tutorial section in dark mode */
-.dark-mode #Tutorial {
+/* Specific styling for all sections in dark mode */
+.dark-mode .section {
   background-color: #121212;
   color: white;
 }
 
-.dark-mode #Tutorial h2, .dark-mode #Tutorial p, .dark-mode #Tutorial a {
+.dark-mode .section h2,
+.dark-mode .section p,
+.dark-mode .section a {
   color: white !important;
 }
 
-.dark-mode #Tutorial .btn-primary {
+.dark-mode .section .btn-primary {
   background-color: #1976d2;
   color: white;
 }
