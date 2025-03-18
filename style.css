@@ -396,19 +396,16 @@ footer {
 }
 
 /* Specific styling for tutorial section in dark mode */
-.dark-mode #tutorial {
+.dark-mode #Tutorial {
   background-color: #121212;
-}
-
-.dark-mode #tutorial .container {
   color: white;
 }
 
-.dark-mode #tutorial h2, .dark-mode #tutorial p, .dark-mode #tutorial a {
-  color: white;
+.dark-mode #Tutorial h2, .dark-mode #Tutorial p, .dark-mode #Tutorial a {
+  color: white !important;
 }
 
-.dark-mode #tutorial .btn-primary {
+.dark-mode #Tutorial .btn-primary {
   background-color: #1976d2;
   color: white;
 }
