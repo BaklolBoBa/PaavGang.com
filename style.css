@@ -102,10 +102,11 @@ header p {
   background-color: #005f7f; /* Extra space for Invite button */
 }
 
-/* Features Section */
+/* Common Section Styles */
 .section {
   padding: 80px 0;
   text-align: center;
+  background-color: white;
 }
 
 .container {
@@ -116,13 +117,23 @@ header p {
 h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
+  color: #333;
 }
 
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Features Section */
 .feature-grid {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 30px;
+  margin-top: 30px;
 }
 
 .feature {
@@ -131,6 +142,7 @@ h2 {
   border-radius: 8px;
   width: 22%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
 }
 
 .feature h3 {
@@ -144,7 +156,7 @@ h2 {
 
 /* Invite Section */
 #invite {
-  background-color: #f4f4f4;
+  background-color: white;
 }
 
 #invite h2 {
@@ -159,13 +171,15 @@ h2 {
 
 /* Testimonials Section */
 #testimonials {
-  background-color: #f9f9f9;
+  background-color: white;
 }
 
 .testimonial-grid {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 30px;
 }
 
 .testimonial {
@@ -189,7 +203,7 @@ h2 {
 
 /* Contact Section */
 #contact {
-  background-color: #f4f4f4;
+  background-color: white;
 }
 
 .contact-options {
@@ -197,6 +211,7 @@ h2 {
   justify-content: center;
   gap: 20px;
   align-items: center;
+  margin-top: 30px;
 }
 
 .contact-options a {
@@ -218,6 +233,7 @@ h2 {
   flex-direction: column;
   align-items: center;
   gap: 40px;
+  margin-top: 30px;
 }
 
 .step h4 {
@@ -296,7 +312,6 @@ footer {
     text-decoration: underline;
   }
 
-
   .menu-toggle-checkbox:checked + .menu-toggle-label + ul {
     right: 0;
   }
@@ -328,6 +343,7 @@ footer {
     font-size: 1rem;
     padding: 18px 20px;
   }
+
   .tutorial-steps img {
     width: 100%;
     height: auto;
@@ -348,11 +364,13 @@ footer {
     font-size: 1rem;
   }
 }
+
 .section {
   opacity: 0;
   transform: translateY(20px);
   transition: all 0.5s ease-in-out;
 }
+
 .section.visible {
   opacity: 1;
   transform: translateY(0);
@@ -392,17 +410,10 @@ footer {
   border: 1px solid #333;
 }
 
-/* Remove the !important rule from your existing dark-text class */
-.dark-text {
-  color: white;
-}
-.dark-mode .container, .dark-mode .section, .dark-mode .tutorial-steps {
-  color: #e0e0e0;
-}
-
 .dark-mode img {
   filter: brightness(0.9);
 }
+
 .dark-mode-toggle {
   position: relative;
   display: inline-block;
