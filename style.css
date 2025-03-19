@@ -451,7 +451,8 @@ nav .dark-mode-label {
   color: white;
   font-size: 1rem;
 }
-/* Add these specific dark mode styles for each section */
+
+/* Specific dark mode styles for each section */
 .dark-mode #invite {
   background-color: #121212;
   color: white;

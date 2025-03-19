@@ -1,3 +1,5 @@
+// script.js - Enhancing website with animations & interactivity (PC Optimized)
+
 document.addEventListener("DOMContentLoaded", function () {
     // Smooth scrolling for internal links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -130,12 +132,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Load saved preference
     const savedDarkMode = localStorage.getItem('darkMode');
     if (savedDarkMode) {
-        document.body.classList.add("dark-mode");
-        darkModeInput.checked = true;
+    document.body.classList.add("dark-mode");
+    darkModeInput.checked = true;
     }
 
     darkModeInput.addEventListener("change", () => {
         document.body.classList.toggle("dark-mode");
         localStorage.setItem('darkMode', document.body.classList.contains("dark-mode"));
-    });
-});
+        });
+        document.body.style.display = 'none';
+        void document.body.offsetWidth; // Trigger repaint
+        document.body.style.display = '';
+  });
