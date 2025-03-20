@@ -1,4 +1,4 @@
-/* Base Styles */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -18,19 +18,7 @@ h1, h2, h3, h4 {
   color: #333;
 }
 
-p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #666;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
-/* Navigation Styles */
+/* Navigation Bar */
 nav {
   background-color: #333;
   padding: 20px 0;
@@ -66,6 +54,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
+/* Mobile Menu Styles */
 .menu-toggle-checkbox {
   display: none;
 }
@@ -81,45 +70,7 @@ nav a:hover {
   z-index: 2;
 }
 
-/* Button Styles */
-.btn-primary {
-  background-color: #008CBA;
-  color: white;
-  padding: 20px 60px;
-  font-size: 1.5rem;
-  border-radius: 50px; /* This creates a more circular shape */
-  text-decoration: none;
-  display: inline-block;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: #005f7f;
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-/* Section Styles */
-.section {
-  padding: 80px 0;
-  text-align: center;
-  background-color: white;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease-in-out;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-/* Hero Section */
+/* Header Section */
 header {
   background-color: #4CAF50;
   color: white;
@@ -137,7 +88,46 @@ header p {
   margin-bottom: 30px;
 }
 
-/* Feature Section */
+.btn-primary {
+  background-color: #008CBA;
+  color: white;
+  padding: 20px 40px 25px 40px; 
+  font-size: 1.3rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #005f7f;
+}
+
+/* Common Section Styles */
+.section {
+  padding: 80px 0;
+  text-align: center;
+  background-color: white;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+/* Features Section */
 .feature-grid {
   display: flex;
   justify-content: space-between;
@@ -179,7 +169,11 @@ header p {
   margin-bottom: 30px;
 }
 
-/* Testimonial Section */
+/* Testimonials Section */
+#testimonials {
+  background-color: white;
+}
+
 .testimonial-grid {
   display: flex;
   justify-content: center;
@@ -208,6 +202,10 @@ header p {
 }
 
 /* Contact Section */
+#contact {
+  background-color: white;
+}
+
 .contact-options {
   display: flex;
   justify-content: center;
@@ -243,7 +241,7 @@ header p {
   color: white;
 }
 
-/* Footer Styles */
+/* Footer */
 footer {
   background-color: #333;
   color: white;
@@ -252,7 +250,7 @@ footer {
   font-size: 1.3rem;
 }
 
-/* Media Queries */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
   .menu-toggle-label {
     display: block;
@@ -322,7 +320,19 @@ footer {
   }
 }
 
+.section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /* Dark Mode Styles */
+/* Add these specific dark mode styles for each section */
 .dark-mode {
   background-color: #121212;
   color: white;
@@ -363,6 +373,7 @@ footer {
   color: white !important;
 }
 
+/* Specific styles for the tutorial section */
 .dark-mode #tutorial {
   background-color: #121212;
 }
@@ -378,6 +389,7 @@ footer {
   color: white;
 }
 
+/* Styles for step elements in the tutorial */
 .dark-mode .step {
   background-color: #1c1c1c;
   border: 1px solid #333;
@@ -394,36 +406,24 @@ footer {
   filter: brightness(0.9);
 }
 
-.dark-mode .testimonial,
-.dark-mode .feature {
-  background-color: #1c1c1c;
-  border: 1px solid #333;
-  color: white;
-}
-
-.dark-mode .testimonial p,
-.dark-mode .testimonial h4,
-.dark-mode .feature h3,
-.dark-mode .feature p {
-  color: white;
-}
-
-/* Added specific dark mode styles for invite section */
-.dark-mode #invite {
+/* Apply dark mode to all sections */
+.dark-mode .section {
   background-color: #121212;
   color: white;
 }
 
-.dark-mode #invite h2,
-.dark-mode #invite p,
-.dark-mode #invite .btn-primary {
+.dark-mode .section h2,
+.dark-mode .section p,
+.dark-mode .section a {
+  color: white !important;
+}
+
+.dark-mode .section .btn-primary {
+  background-color: #1976d2;
   color: white;
 }
 
-.dark-mode #invite .btn-primary {
-  background-color: #1976d2;
-}
-
+/* Dark Mode Toggle Styles */
 .dark-mode-toggle {
   position: relative;
   display: inline-block;
@@ -476,6 +476,7 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+/* Navigation Bar Adjustments for Dark Mode Toggle */
 nav .dark-mode-container {
   display: flex;
   align-items: center;
@@ -486,3 +487,308 @@ nav .dark-mode-label {
   color: white;
   font-size: 1rem;
 }
+
+/* Specific dark mode styles for each section */
+.dark-mode #invite {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode #invite h2, .dark-mode #invite p, .dark-mode #invite .btn-primary {
+  color: white;
+}
+
+.dark-mode #invite .btn-primary {
+  background-color: #1976d2;
+}
+
+.dark-mode #testimonials {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode #testimonials h2, .dark-mode #testimonials p, .dark-mode #testimonials h4 {
+  color: white;
+}
+
+.dark-mode #contact {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode #contact h2, .dark-mode #contact p, .dark-mode #contact .btn-primary {
+  color: white;
+}
+
+.dark-mode #contact .btn-primary {
+  background-color: #1976d2;
+}
+
+/* Add these specific dark mode styles for other sections */
+.dark-mode #features {
+  background-color: #121212;
+}
+
+.dark-mode #features h2,
+.dark-mode #features p,
+.dark-mode #features .btn-primary {
+  color: white;
+}
+
+.dark-mode #features .btn-primary {
+  background-color: #1976d2;
+}
+
+.dark-mode #Tutorial {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode #Tutorial h2,
+.dark-mode #Tutorial p,
+.dark-mode #Tutorial a {
+  color: white;
+}
+
+.dark-mode #Tutorial .btn-primary {
+  background-color: #1976d2;
+  color: white;
+}
+
+.dark-mode #how-to-use,
+.dark-mode #mod {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode #how-to-use h2,
+.dark-mode #how-to-use p,
+.dark-mode #mod h2,
+.dark-mode #mod p {
+  color: white;
+}
+
+.dark-mode #how-to-use .btn-primary,
+.dark-mode #mod .btn-primary {
+  background-color: #1976d2;
+  color: white;
+}
+
+.dark-mode #tutorial-join-server {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode #tutorial-join-server h2,
+.dark-mode #tutorial-join-server p {
+  color: white;
+}
+/* Add these specific dark mode styles for testimonials and features sections */
+.dark-mode .testimonial {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  color: white;
+}
+
+.dark-mode .testimonial p,
+.dark-mode .testimonial h4 {
+  color: white;
+}
+
+.dark-mode .feature {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  color: white;
+}
+
+.dark-mode .feature h3,
+.dark-mode .feature p {
+  color: white;
+}
+/* Hero Section Enhancements */
+#hero {
+  background: linear-gradient(135deg, #4CAF50 0%, #212121 100%);
+  padding: 100px 0;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#hero p {
+  font-size: 1.8rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: white;
+}
+
+/* Button Enhancements */
+.btn-primary {
+  font-size: 1.5rem;
+  padding: 20px 60px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature Section Enhancements */
+.feature-grid {
+  gap: 40px;
+}
+
+.feature {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+  border-radius: 20px;
+  padding: 40px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+.feature h3 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Testimonial Section Enhancements */
+.testimonial {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.testimonial h4 {
+  color: #008CBA;
+}
+
+/* Contact Section Enhancements */
+.contact-options {
+  gap: 30px;
+}
+
+.contact-options a {
+  font-size: 1.5rem;
+  padding: 20px 60px;
+  border-radius: 50px;
+}
+
+/* Add subtle animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section {
+  animation: fadeIn 1s ease;
+}
+
+/* Dark Mode Adjustments */
+.dark-mode #hero {
+  background: linear-gradient(135deg, #212121 0%, #121212 100%);
+}
+
+.dark-mode #hero h1 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .feature,
+.dark-mode .testimonial {
+  background: linear-gradient(135deg, #1c1c1c 0%, #212121 100%);
+  border: 1px solid #333;
+}
+
+.dark-mode .feature h3,
+.dark-mode .testimonial h4 {
+  color: #66bb6a;
+}
+/* Enhanced Background for Homepage */
+#hero {
+  background: linear-gradient(135deg, #4CAF50 0%, #212121 100%);
+  padding: 100px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, transparent 20%, rgba(0,0,0,0.1) 80%);
+  z-index: -1;
+}
+
+#hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#hero p {
+  font-size: 1.8rem;
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: white;
+}
+
+/* Feature Section Enhancements */
+.feature-grid {
+  gap: 40px;
+}
+
+.feature {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f8f8 100%);
+  border-radius: 20px;
+  padding: 40px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature:hover {
+  transform: translateY(-10px);
+}
+
+/* Dark Mode Adjustments */
+.dark-mode #hero {
+  background: linear-gradient(135deg, #212121 0%, #121212 100%);
+}
+
+.dark-mode #hero::before {
+  background: radial-gradient(circle, transparent 20%, rgba(255,255,255,0.1) 80%);
+}
+
+.dark-mode .feature {
+  background: linear-gradient(135deg, #1c1c1c 0%, #212121 100%);
+  border: 1px solid #333;
+}
+
+.dark-mode .feature:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+} 
