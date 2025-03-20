@@ -1,4 +1,4 @@
-/* Global Styles */
+/* Base Styles */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +18,19 @@ h1, h2, h3, h4 {
   color: #333;
 }
 
-/* Navigation Bar */
+p {
+  font-size: 1.4rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Navigation Styles */
 nav {
   background-color: #333;
   padding: 20px 0;
@@ -54,7 +66,6 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* Mobile Menu Styles */
 .menu-toggle-checkbox {
   display: none;
 }
@@ -70,7 +81,42 @@ nav a:hover {
   z-index: 2;
 }
 
-/* Header Section */
+/* Button Styles */
+.btn-primary {
+  background-color: #008CBA;
+  color: white;
+  padding: 20px 40px 25px 40px; 
+  font-size: 1.3rem;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #005f7f;
+}
+
+/* Section Styles */
+.section {
+  padding: 80px 0;
+  text-align: center;
+  background-color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+/* Hero Section */
 header {
   background-color: #4CAF50;
   color: white;
@@ -88,46 +134,7 @@ header p {
   margin-bottom: 30px;
 }
 
-.btn-primary {
-  background-color: #008CBA;
-  color: white;
-  padding: 20px 40px 25px 40px; 
-  font-size: 1.3rem;
-  border-radius: 10px;
-  text-decoration: none;
-  display: inline-block;
-}
-
-.btn-primary:hover {
-  background-color: #005f7f;
-}
-
-/* Common Section Styles */
-.section {
-  padding: 80px 0;
-  text-align: center;
-  background-color: white;
-}
-
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #666;
-}
-
-/* Features Section */
+/* Feature Section */
 .feature-grid {
   display: flex;
   justify-content: space-between;
@@ -169,11 +176,7 @@ p {
   margin-bottom: 30px;
 }
 
-/* Testimonials Section */
-#testimonials {
-  background-color: white;
-}
-
+/* Testimonial Section */
 .testimonial-grid {
   display: flex;
   justify-content: center;
@@ -202,10 +205,6 @@ p {
 }
 
 /* Contact Section */
-#contact {
-  background-color: white;
-}
-
 .contact-options {
   display: flex;
   justify-content: center;
@@ -241,7 +240,7 @@ p {
   color: white;
 }
 
-/* Footer */
+/* Footer Styles */
 footer {
   background-color: #333;
   color: white;
@@ -250,7 +249,7 @@ footer {
   font-size: 1.3rem;
 }
 
-/* Mobile Adjustments */
+/* Media Queries */
 @media (max-width: 768px) {
   .menu-toggle-label {
     display: block;
@@ -320,19 +319,7 @@ footer {
   }
 }
 
-.section {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.5s ease-in-out;
-}
-
-.section.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* Dark Mode Styles */
-/* Add these specific dark mode styles for each section */
 .dark-mode {
   background-color: #121212;
   color: white;
@@ -373,7 +360,6 @@ footer {
   color: white !important;
 }
 
-/* Specific styles for the tutorial section */
 .dark-mode #tutorial {
   background-color: #121212;
 }
@@ -389,7 +375,6 @@ footer {
   color: white;
 }
 
-/* Styles for step elements in the tutorial */
 .dark-mode .step {
   background-color: #1c1c1c;
   border: 1px solid #333;
@@ -406,24 +391,36 @@ footer {
   filter: brightness(0.9);
 }
 
-/* Apply dark mode to all sections */
-.dark-mode .section {
+.dark-mode .testimonial,
+.dark-mode .feature {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  color: white;
+}
+
+.dark-mode .testimonial p,
+.dark-mode .testimonial h4,
+.dark-mode .feature h3,
+.dark-mode .feature p {
+  color: white;
+}
+
+/* Added specific dark mode styles for invite section */
+.dark-mode #invite {
   background-color: #121212;
   color: white;
 }
 
-.dark-mode .section h2,
-.dark-mode .section p,
-.dark-mode .section a {
-  color: white !important;
-}
-
-.dark-mode .section .btn-primary {
-  background-color: #1976d2;
+.dark-mode #invite h2,
+.dark-mode #invite p,
+.dark-mode #invite .btn-primary {
   color: white;
 }
 
-/* Dark Mode Toggle Styles */
+.dark-mode #invite .btn-primary {
+  background-color: #1976d2;
+}
+
 .dark-mode-toggle {
   position: relative;
   display: inline-block;
@@ -476,7 +473,6 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-/* Navigation Bar Adjustments for Dark Mode Toggle */
 nav .dark-mode-container {
   display: flex;
   align-items: center;
@@ -486,122 +482,4 @@ nav .dark-mode-label {
   margin-right: 10px;
   color: white;
   font-size: 1rem;
-}
-
-/* Specific dark mode styles for each section */
-.dark-mode #invite {
-  background-color: #121212;
-  color: white;
-}
-
-.dark-mode #invite h2, .dark-mode #invite p, .dark-mode #invite .btn-primary {
-  color: white;
-}
-
-.dark-mode #invite .btn-primary {
-  background-color: #1976d2;
-}
-
-.dark-mode #testimonials {
-  background-color: #121212;
-  color: white;
-}
-
-.dark-mode #testimonials h2, .dark-mode #testimonials p, .dark-mode #testimonials h4 {
-  color: white;
-}
-
-.dark-mode #contact {
-  background-color: #121212;
-  color: white;
-}
-
-.dark-mode #contact h2, .dark-mode #contact p, .dark-mode #contact .btn-primary {
-  color: white;
-}
-
-.dark-mode #contact .btn-primary {
-  background-color: #1976d2;
-}
-
-/* Add these specific dark mode styles for other sections */
-.dark-mode #features {
-  background-color: #121212;
-}
-
-.dark-mode #features h2,
-.dark-mode #features p,
-.dark-mode #features .btn-primary {
-  color: white;
-}
-
-.dark-mode #features .btn-primary {
-  background-color: #1976d2;
-}
-
-.dark-mode #Tutorial {
-  background-color: #121212;
-  color: white;
-}
-
-.dark-mode #Tutorial h2,
-.dark-mode #Tutorial p,
-.dark-mode #Tutorial a {
-  color: white;
-}
-
-.dark-mode #Tutorial .btn-primary {
-  background-color: #1976d2;
-  color: white;
-}
-
-.dark-mode #how-to-use,
-.dark-mode #mod {
-  background-color: #121212;
-  color: white;
-}
-
-.dark-mode #how-to-use h2,
-.dark-mode #how-to-use p,
-.dark-mode #mod h2,
-.dark-mode #mod p {
-  color: white;
-}
-
-.dark-mode #how-to-use .btn-primary,
-.dark-mode #mod .btn-primary {
-  background-color: #1976d2;
-  color: white;
-}
-
-.dark-mode #tutorial-join-server {
-  background-color: #121212;
-  color: white;
-}
-
-.dark-mode #tutorial-join-server h2,
-.dark-mode #tutorial-join-server p {
-  color: white;
-}
-/* Add these specific dark mode styles for testimonials and features sections */
-.dark-mode .testimonial {
-  background-color: #1c1c1c;
-  border: 1px solid #333;
-  color: white;
-}
-
-.dark-mode .testimonial p,
-.dark-mode .testimonial h4 {
-  color: white;
-}
-
-.dark-mode .feature {
-  background-color: #1c1c1c;
-  border: 1px solid #333;
-  color: white;
-}
-
-.dark-mode .feature h3,
-.dark-mode .feature p {
-  color: white;
 }
