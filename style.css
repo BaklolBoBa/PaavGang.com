@@ -332,16 +332,17 @@ footer {
 }
 
 /* Dark Mode Styles */
+/* Add these specific dark mode styles for each section */
 .dark-mode {
   background-color: #121212;
-  color: #ffffff;
+  color: white;
 }
 
 .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4 {
   color: #e0e0e0;
 }
 
-.dark-mode p, .dark-mode a, .dark-mode .btn-primary {
+.dark-mode p, .dark-mode a {
   color: #e0e0e0;
 }
 
@@ -361,9 +362,44 @@ footer {
   background-color: #212121;
 }
 
-.dark-mode .feature, .dark-mode .testimonial {
+.dark-mode .section {
+  background-color: #121212;
+  color: white;
+}
+
+.dark-mode .section h2,
+.dark-mode .section p,
+.dark-mode .section a {
+  color: white !important;
+}
+
+/* Specific styles for the tutorial section */
+.dark-mode #tutorial {
+  background-color: #121212;
+}
+
+.dark-mode #tutorial h2,
+.dark-mode #tutorial h4,
+.dark-mode #tutorial p {
+  color: white;
+}
+
+.dark-mode #tutorial .btn-primary {
+  background-color: #1976d2;
+  color: white;
+}
+
+/* Styles for step elements in the tutorial */
+.dark-mode .step {
   background-color: #1c1c1c;
   border: 1px solid #333;
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.dark-mode .step h4,
+.dark-mode .step p {
+  color: white;
 }
 
 .dark-mode img {
@@ -545,5 +581,27 @@ nav .dark-mode-label {
 
 .dark-mode #tutorial-join-server h2,
 .dark-mode #tutorial-join-server p {
+  color: white;
+}
+/* Add these specific dark mode styles for testimonials and features sections */
+.dark-mode .testimonial {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  color: white;
+}
+
+.dark-mode .testimonial p,
+.dark-mode .testimonial h4 {
+  color: white;
+}
+
+.dark-mode .feature {
+  background-color: #1c1c1c;
+  border: 1px solid #333;
+  color: white;
+}
+
+.dark-mode .feature h3,
+.dark-mode .feature p {
   color: white;
 }
