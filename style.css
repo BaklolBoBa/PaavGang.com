@@ -792,3 +792,23 @@ nav .dark-mode-label {
 .dark-mode .feature:hover {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 } 
+.feedback-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.feedback-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Feedback - Hagasa Bot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <nav>
+        <div class="container">
+            <h1>Hagasa Bot</h1>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+            <label for="menu-toggle" class="menu-toggle-label">&#9776;</label>
+        
+            <ul id="menu">
+                <li><a href="index.html#features">Features</a></li>
+                <li><a href="index.html#invite">Invite Bot</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="index.html#Tutorial">Tutorial</a></li>
+                <li><a href="Terms-of-Service.html">Terms of Service</a></li>
+                <li><a href="Privacy-Policy.html">Privacy Policy</a></li>
+            </ul>
+            
+            <div class="dark-mode-container">
+                <span class="dark-mode-label">Dark Mode</span>
+                <label class="dark-mode-toggle" for="dark-mode-switch"></label>
+                <input type="checkbox" id="dark-mode-switch" class="menu-toggle-checkbox">
+            </div>
+        </div>
+    </nav>
+    
+    <section class="section">
+        <div class="container">
+            <h2>Submit Feedback</h2>
+            <p>We value your input! Please take a moment to share your thoughts with us.</p>
+            <form action="submit_feedback.php" method="POST" class="feedback-form">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Feedback" required></textarea>
+                <button type="submit" class="btn-primary">Submit Feedback</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Hagasa Bot. All rights reserved.</p>
+    </footer>
+</body>
+</html>
